@@ -1,0 +1,14 @@
+@mixin sejajar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+@mixin flex-box($direction: column, $spasi: center) {
+  display: flex;
+  justify-content: $spasi;
+  align-items: center;
+  flex-direction: $direction;
+}

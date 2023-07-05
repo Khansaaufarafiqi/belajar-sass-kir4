@@ -1,0 +1,33 @@
+// .main {
+//   background-color: cyan;
+//   color: rgb(0, 0, 0);
+//   border-radius: 50px;
+//   .main-heading {
+//     color: blueviolet;
+//     font-size: 2em;
+//   }
+//   .main-paragraf {
+//     color: white;
+//     font-size: 1em;
+//   }
+// }
+
+// .main,
+// footer {
+//   h1,
+//   p {
+//     letter-spacing: 1px;
+//   }
+// }
+
+// &
+// parent Selector
+.footer {
+  & &-heading {
+    font-size: 3em;
+    background-color: violet;
+  }
+  & &-paragraf {
+    font-size: 1em;
+  }
+}

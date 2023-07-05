@@ -1,0 +1,13 @@
+@use "mixin";
+
+.header ul {
+  @include mixin.sejajar();
+  li {
+    background-color: purple;
+    padding: 10px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

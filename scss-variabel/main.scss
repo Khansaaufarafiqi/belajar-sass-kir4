@@ -1,0 +1,58 @@
+// CSS Variabel
+// body {
+//   background-color: grey;
+// }
+// :root {
+//   --warna-utama: violet;
+//   --warna-cadangan: cyan;
+//   --warna-text: grey;
+// }
+// header {
+//   height: 90vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   h1 {
+//     color: var(--warna-utama);
+//     // text-align: center;
+//   }
+//   p {
+//     color: var(--warna-cadangan);
+//   }
+// }
+
+// SASS variabel
+// $warna-utama: violet;
+// $warna-cadangan: cyan;
+// body {
+//   $warna-text: grey !global;
+//   background-color: $warna-text;
+// }
+// header {
+//   height: 90vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+
+//   p {
+//     color: $warna-cadangan;
+//   }
+// }
+// h1 {
+//   color: $warna-text;
+// }
+
+// MAP
+$alert: (
+  "warna-utama": violet,
+  "warna-cadangan": cyan,
+  "warna-text": grey,
+);
+body {
+  background-color: map-get($alert, warna-text);
+}
+h1 {
+  color: map-get($alert, warna-utama);
+}

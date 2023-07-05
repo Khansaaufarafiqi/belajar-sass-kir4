@@ -1,0 +1,46 @@
+body {
+  background-color: gray;
+}
+$warna-dasar: rgb(170, 34, 163);
+$ukuran-text-judul: 4em;
+h1 {
+  color: $warna-dasar;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: $ukuran-text-judul;
+  text-align: center;
+}
+//adjust -color adalah manipulasi wana atau pencampuran warna
+h1 {
+  //   color: adjust-color($color: $warna-dasar, $red: 100, $green: 20);
+}
+//adjust-hue adalah pengukuran derajat warna
+h1 {
+  //   color: adjust-hue($warna-dasar, $degrees: -20deg);
+}
+//complement : kebalikan dari warna
+h1 {
+  //   color: complement($color: $warna-dasar);
+}
+//darken mengatur kegelapan warna
+h1 {
+  //   color: darken($warna-dasar, $amount: 20%);
+}
+h1 {
+  //   color: lighten($warna-dasar, $amount: 20%);
+}
+h1 {
+  //   color: saturate($warna-dasar, 60%);
+}
+h1 {
+  //   color: desaturate($warna-dasar, 95%);
+}
+//mencampur warna dengan seberapa persen
+h1 {
+  //   color: mix($warna-dasar, #08992c, 60%);
+}
+h1 {
+  //   color: fade-in(rgba(255, 49, 20, 0.1), $amount: 0.5);
+}
+h1 {
+  //   color: fade-out($warna-dasar, 0.5)
+}

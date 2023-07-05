@@ -1,0 +1,13 @@
+@use "mixin" as tes;
+
+.footer ul {
+  @include tes.sejajar();
+  li {
+    background-color: orangered;
+    padding: 5px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

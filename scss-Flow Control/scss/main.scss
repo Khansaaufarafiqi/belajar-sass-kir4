@@ -1,0 +1,107 @@
+body {
+  height: 150vh;
+}
+@mixin profile-pht($ukuran, $circle: false) {
+  width: $ukuran;
+  height: $ukuran;
+  border: 5px solid gray;
+  box-shadow: 1px 1px 3px rgba($color: #000, $alpha: 0.5);
+  padding: 5px;
+
+  @if $circle {
+    border-radius: 50%;
+  }
+}
+.square-pht {
+  @include profile-pht(150px, $circle: false);
+}
+.circle-pht {
+  @include profile-pht(80px, $circle: true);
+}
+.lingkaran-pht {
+  @include profile-pht(80px, $circle: true);
+}
+
+//else
+$light-bg: white;
+$light-text: rgb(10, 10, 10);
+$dark-bg: gray;
+$dark-text: rgb(207, 195, 195);
+
+@mixin color-mode($light-mode: true) {
+  @if $light-mode {
+    background-color: $light-bg;
+    color: $light-text;
+  } @else {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+}
+.nav {
+  @include color-mode($light-mode: true);
+}
+@mixin triangel($size, $color, $direction) {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: $size * 2;
+  @if $direction == up {
+    border-bottom-color: $color;
+  } @else if $direction == right {
+    border-left-color: $color;
+  } @else if $direction == down {
+    border-top-color: $color;
+  } @else {
+    border-right-color: $color;
+  }
+}
+.top {
+  @include triangel(10px, rgb(100, 20, 20), right);
+}
+//for
+$color: red;
+// .color {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+//   @for $i from 1 to 11 {
+//     li:nth-child(#{$i}) {
+//       padding: 5px;
+//       background-color: lighten($color, $i * 3%);
+//     }
+//   }
+// }
+.color {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  $i: 1;
+  @while $i < 17 {
+    li:nth-child(#{$i}) {
+      padding: 5px;
+      background-color: lighten($color, $i * 3%);
+    }
+    $i: $i + 1;
+  }
+}
+
+//each
+$social-colors: (
+  yutube: #ff0000,
+  facebook: #3b5998,
+  twitter: #1da1f2,
+  instagram: #ffbf34,
+  twitch: #8134af,
+);
+.sosial {
+  font-size: 2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  @each $social, $colors in $social-colors {
+    .#{$social} {
+      color: $colors;
+    }
+  }
+}
